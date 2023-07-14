@@ -17,6 +17,10 @@ public class RNCAsyncStorageSwift {
         return makeManifestJsonDictionary(from: manifestFile)
     }()
 
+    // MARK: - Initialization
+
+    public init() {}
+
     // MARK: - Public methods
 
     public func getValueForKey<T>(_ key: String) -> T? {

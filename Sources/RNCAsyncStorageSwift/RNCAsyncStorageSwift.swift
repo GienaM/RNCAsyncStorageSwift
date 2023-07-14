@@ -23,11 +23,11 @@ public class RNCAsyncStorageSwift {
 
     // MARK: - Public methods
 
-    public func getValueForKey<T>(_ key: String) -> T? {
-        if let value = manifestDictionary[key] as? T {
+    public func getValueForKey(_ key: String) -> String? {
+        if let value = manifestDictionary[key] as? String {
             return value
         } else if let filePath = getFilePathForKey(key),
-                  let value = readFile(at: filePath) as? T? {
+                  let value = readFile(at: filePath) {
             return value
         }
 
